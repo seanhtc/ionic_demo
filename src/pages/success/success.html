@@ -1,0 +1,13 @@
+<ion-content padding align="center">
+    <div class="successMessage">
+        <h2 align="center">Congratulation!!</h2>
+        <p>You have completed Check-in<br/>Causeway Bay Store</p>
+        <div class="successInfo">
+            <div class="earnPointsBox">
+                <p *ngIf="earnPoints">+ {{earnPoints}} points</p>
+            </div>
+            <img [src]="imgSrc" alt="" />
+        </div>
+        <p *ngIf="receivedTotalPoints">{{receivedTotalPoints}} points in total</p>
+    </div>
+</ion-content>

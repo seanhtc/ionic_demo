@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title align="center">Account</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content align="center">
+  <div class="profileBox" padding>
+      <div class="pofileThumbnail">
+          <img [src]="imgSrc" alt="" />
+      </div>
+      <div class="pofileDetails">
+          <h2 align="center" class="userName">{{store.user.UserName}}</h2>
+          <p class="levelIcon"><img [src]="memeberLevelIconSrc" width="15" />Bronze Member</p>
+          <p>{{store.user.EmailAddress}}</p>
+      </div>
+  </div>
+
+  <div class="personalResult">
+    <div class="item">
+        <p><ion-icon name="ios-bookmark-outline"></ion-icon> Points</p>
+        <p class="point">{{store.user.Point}}</p>
+        <p class="date">As of 2018/3/7</p>
+    </div>
+  </div>
+  
+  <div class="personalResult historyBox">
+      <div class="item" *ngFor="let historyItem of store.user.DataItem.reverse()" [class.otherTheme]="historyItem.theme">
+          <p><ion-icon name="ios-bookmark-outline"></ion-icon> {{historyItem.type}} Points</p>
+          <p class="point">
+            <ion-icon *ngIf="!historyItem.theme" name="add"></ion-icon> 
+            <ion-icon *ngIf="historyItem.theme" name="remove"></ion-icon> {{historyItem.Point}}
+          </p>
+          <p>{{historyItem.description}}</p>
+          <p class="date">As of {{historyItem.Date}}</p>
+      </div>
+  </div>
+</ion-content>

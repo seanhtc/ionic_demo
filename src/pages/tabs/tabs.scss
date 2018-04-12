@@ -1,0 +1,15 @@
+#tab-t0-2 {
+    height: 70px;
+    min-width: 85px;
+    background-color: #488aff;
+    color: white;
+
+    .tab-button-icon {
+        color: white;
+    }
+}
+
+.tabs-ios[tabsLayout=icon-hide] .tab-button,
+.tabs-ios .tab-button.has-title-only {
+    min-height: 70px;
+}

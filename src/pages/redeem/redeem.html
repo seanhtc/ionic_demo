@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Redeem
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div>
+    <p *ngIf="this.store.user.Point <= 2500" class="alignCenter"><ion-icon name="information-circle"></ion-icon> No Redeem Items now.</p>
+    <div *ngIf="this.store.user.Point > 2500" class="alignCenter redeemItemBox">
+      <img [src]="imgSrc" alt="" width="80%" />
+      <button ion-button block color="dark" (click)="redeem()">Redeem</button>
+    </div>
+  </div>
+</ion-content>

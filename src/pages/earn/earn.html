@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Earn
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding align="center">
+    <div class="earnPage">
+        <h2>Any other ways to GET and EARN points?</h2>
+        <br/>
+        <button ion-button block class="fb" (click)="handleEarnClick('fb')">
+          <ion-icon ios="ios-thumbs-up" md="md-thumbs-up"></ion-icon>&nbsp;&nbsp;
+          <p>Like Offical Facebook Fans Page</p>
+        </button>
+        <br/>
+        <button ion-button block (click)="handleEarnClick('optin')">
+          <ion-icon ios="ios-arrow-forward" md="md-arrow-forward"></ion-icon>&nbsp;&nbsp; 
+          <p>Allow Opt-in Access</p>
+        </button>
+    </div>
+</ion-content>

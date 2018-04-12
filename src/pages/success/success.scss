@@ -1,0 +1,34 @@
+.successMessage {
+    margin-top: 80px;
+}
+
+.successInfo {
+    display: inline-block;
+    width: 100%;
+
+    .earnPointsBox {
+        display: table;
+        float: left;
+        background-color: #488aff;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-left: 40px;
+
+        p {
+            font-size: 2rem;
+            color: white;
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+
+    img {
+        display: inline-block;
+        margin-top: 30px;
+        float: left;
+        margin-left: 20px;
+    }
+}
+
+
